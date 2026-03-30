@@ -83,4 +83,20 @@ int main(){
     pibPerCapita2 = pib2 / populacao2;
 
 
+    // ================= COMPARAÇÃO =================
+    printf("\n=== Comparacao de Cartas===\n");
+    printf("Atributo escolhido: Populacao\n\n");
+
+    printf("Carta 1 - %s (%s): %d\n", cidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%s): %d\n", cidade2, estado2, populacao2);
+
+    if (populacao1 > populacao2) {
+        printf("\nResultado: Carta 1 venceu!\n", cidade1);
+    } else if (populacao2 > populacao1) {
+        printf("\nResultado: Carta 2 venceu!\n", cidade2);
+    } else {
+        printf("\n Resultado: Empate\n");
+    }
+
+    return 0;
 }
