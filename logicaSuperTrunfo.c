@@ -17,96 +17,23 @@ int main() {
     float densidade2 = populacao2 / area2; 
     
     // ================ MENU ===============
-    int opcao;
+    int op1, op2;
 
-    printf("=== SUPER TRUNFO ===\n");
-    printf("Escolha o atributo para comparacao:\n");
-    printf("1 - Populacao\n");
-    printf("2 - Area\n");
-    printf("3 - PIB\n");
-    printf("4 - Pontos Turisticos\n");
-    printf("5 - Densidade Demografica\n");
-    printf("Opcao: ");
-    scanf("%d", &opcao);
+    printf("=== SUPER TRUNFO - NIVEL MESTRE ===\n");
 
-    printf("\n=== RESULTADO ===\n");
+    printf("\nEscola o PRIMEIRO atributo:\n");
+    printf("1 - Populacao\n2 - Area\n3 - PIB\n4 - Pontos Turisticos\n5 - Densidade\n");
+    scanf("%d", &op1);
 
-    switch (opcao)
-    {
-    case 1:
-        printf("Atributo: Populacao\n");
-        printf("%s: %d\n", cidade1, populacao1);
-        printf("%s: %d\n", cidade2, populacao2);
+    printf("\nEscolha o SEGUNDO atributo (diferente do primeiro):\n");
+    scanf("%d", &op2);
 
-        if (populacao1 > populacao2) {
-            printf("Vencedor: %s\n", cidade1);
-        } else if (populacao2 > populacao1) {
-            printf("Vencedor: %s\n", cidade2);
-        } else {
-            printf("Empate!\n");
-        }
-        break;
-
-    case 2:
-        printf("Atributo: Area\n");
-        printf("%s: %.2f\n", cidade1, area1);
-        printf("%s: %.2f\n", cidade2, area2);
-
-        if (area1 > area2) {
-            printf("Vencedor: %s\n", cidade1);
-        } else if (area2 > area1) {
-            printf("Vencedor: %s\n", cidade2);
-        } else {
-            printf("Empate!\n");
-        }
-        break;
-
-    case 3:
-        printf("Atributo: PIB\n");
-        printf("%s: %.2f\n", cidade1, pib1);
-        printf("%s: %.2f\n", cidade2, pib2);
-
-        if (pib1 > pib2) {
-            printf("Vencedor: %s\n", cidade1);
-        } else if (pib2 > pib1) {
-            printf("Vencedor: %s\n", cidade2);
-        } else {
-            printf("Empate!\n");
-        }
-        break;
-
-    case 4:
-        printf("Atributo: Ponto Turistico\n");
-        printf("%s: %d\n", cidade1, pontos1);
-        printf("%s: %d\n", cidade2, pontos2);
-
-        if (pontos1 > pontos2) {
-            printf("Vencedor: %s\n", cidade1);
-        } else if (pontos2 > pontos1) {
-            printf("Vencedor: %s\n", cidade2);
-        } else {
-            printf("Empate!\n");
-        }
-        break;
-
-    case 5:
-        printf("Atributo: Densidade Demografica\n");
-        printf("%s: %.2f\n", cidade1, densidade1);
-        printf("%s: %.2f\n", cidade2, densidade2);
-
-        // REGRA INVERTIDA
-        if (densidade1 < densidade2) {
-            printf("Vencedor: %s\n", cidade1);
-        } else if (densidade2 < densidade2) {
-            printf("Vencedor: %s\n", cidade2);
-        } else {
-            printf("Empate!\n");
-        }
-        break;
-    
-    default:
-        printf("Opcao invalida!\n");
+    if (op1 == op2) {
+        printf("Erro: atributos iguais!\n");
+        return 0;
     }
+
+    
 
     return 0;
 }
