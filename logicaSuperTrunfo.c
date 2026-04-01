@@ -33,7 +33,76 @@ int main() {
         return 0;
     }
 
-    
+    float valor1_c1 = 0, valor1_c2 =0;
+    float valor2_c1 = 0, valor2_c2 =0;
+
+    char nomeAttr1[30], nomeAttr2[30];
+
+    // =============== ATRIBUTO 1 ===============
+    switch (op1)
+    {
+    case 1:
+        valor1_c1 = populacao1;
+        valor1_c2 = populacao2;
+        sprintf(nomeAttr1, "Populacao");
+        break;
+    case 2:
+        valor1_c1 = area1;
+        valor1_c2 = area2;
+        sprintf(nomeAttr1, "Area");
+        break;
+    case 3:
+        valor1_c1 = pib1;
+        valor1_c2 = pib2;
+        sprintf(nomeAttr1, "PIB");
+    case 4:
+        valor1_c1 = pontos1;
+        valor1_c2 = pontos2;
+        sprintf(nomeAttr1, "Pontos Turisticos");
+        break;
+    case 5:
+        valor1_c1 = densidade1;
+        valor1_c2 = densidade2;
+        sprintf(nomeAttr1, "Densidade");
+        break;
+    default:
+        printf("Opcao invalida!\n");
+        return 0;
+    }
+
+    // =============== ATRIBUTO 2 ===============
+
+    switch(op2) 
+    {
+    case 1:
+        valor2_c1 = populacao1;
+        valor2_c2 = populacao2;
+        sprintf(nomeAttr2, "Populacao");
+        break;
+    case 2:
+        valor2_c1 = area1;
+        valor2_c2 = area2;
+        sprintf(nomeAttr2, "Area");
+        break;
+    case 3:
+        valor2_c1 = pib1;
+        valor2_c2 = pib2;
+        sprintf(nomeAttr2, "PIB");
+        break;
+    case 4:
+        valor2_c1 = pontos1;
+        valor2_c2 = pontos2;
+        sprintf(nomeAttr2, "Pontos Turisticos");
+        break;
+    case 5:
+        valor2_c1 = densidade1;
+        valor2_c2 = densidade2;
+        sprintf(nomeAttr2, "Densidade");
+        break;
+    default:
+        printf("Opcao invalida!\n");
+        return 0;
+    }
 
     return 0;
 }
