@@ -104,5 +104,33 @@ int main() {
         return 0;
     }
 
+    // ================ COMPARACAO INDIVIDUAL ===============
+    int resultado1 = (op1 == 5) ? (valor1_c1 < valor1_c2) : (valor1_c1 > valor1_c2);
+    int resultado2 = (op2 == 5) ? (valor2_c1 < valor2_c2) : (valor2_c1 > valor2_c2);
+
+    // ================ SOMA ===============
+    float soma1 = valor1_c1 + valor2_c1;
+    float soma2 = valor1_c2 + valor2_c2;
+
+    // ================ RESULTADO FINAL ===============
+    printf("\n=== RESULTADO ===\n");
+
+    printf("\nCarta 1: %s\n", cidade1);
+    printf("%s: %.2f | %s: %.2f\n", nomeAttr1, valor1_c1, nomeAttr2, valor2_c1);
+
+    printf("\nCarta 2: %s\n", cidade2);
+    printf("%s: %.2f | %s: %.2f\n", nomeAttr1, valor1_c2, nomeAttr2, valor2_c2);
+
+    printf("\nSoma Carta 1: %.2f\n", soma1);
+    printf("Soma Carta 2: %.2f\n", soma2);
+
+    printf("\nResultado final: ");
+
+    printf("%s\n", 
+        (soma1 > soma2) ? "Carta 1 venceu!" :
+        (soma2 > soma1) ? "Carta 2 venceu!" :
+        "Empate!"
+    );
+
     return 0;
 }
